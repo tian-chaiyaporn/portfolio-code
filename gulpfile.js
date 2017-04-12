@@ -62,15 +62,10 @@ gulp.task('js', function() {
   }
 
   return jsbuild.pipe(gulp.dest(folder.build + 'js/'));
-
 });
 
 //css
 gulp.task('css', function() {
-
-	var cssbuild = gulp.src(folder.src + 'sass/**/*')
-	    .pipe(deporder())
-	    .pipe(concat('style.css'));
 
 	return gulp.src(folder.src + 'sass/**/*')
 		.pipe(sass({
@@ -94,7 +89,6 @@ gulp.task('watch', function() {
 
   // css changes
   gulp.watch(folder.src + 'scss/**/*', ['css']);
-
 });
 
 // run all tasks

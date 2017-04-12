@@ -1,8 +1,8 @@
 {
-  "name": "port_logo",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "a mini project for a website showcasing logo design",
-  "main": "index.js",
+  "description": "a mini project for a website showcasing works throughout the stack",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

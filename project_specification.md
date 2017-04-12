@@ -2,6 +2,7 @@ Project Goals:
 
 To learn the following technologies:
 1. Gulp Build Tool
+2. Bootstrap SASS
 3. SASS/SCSS + rscss
 4. CSS animation / libraries
 5. jquery for DOM manipulation
