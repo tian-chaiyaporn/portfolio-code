@@ -1,0 +1,5 @@
+*{box-sizing:border-box}html,body{background-color:#003;color:#ffc;font-family:Courier New,Courier,Lucida Sans Typewriter,Lucida Typewriter,monospace;height:100%;margin:0}
+
+.color-1{color:#ffc}.color-2{color:#fcc}.color-3{color:#f9c}.color-4{color:#f99}.color-5{color:#f66}.color-6{color:#f06}.color-7{color:#f09}.color-8{color:#f0c}.color-9{color:#f0f}.color-10{color:#ccf}.color-11{color:#cff}.color-12{color:#cfc}
+
+.text-block,.text-block-stack,.text-block-description,.text-block-detail{border-left:3px solid;font-size:13px;list-style-type:none;padding-left:10px}.text-block-stack{font-weight:bold}.text-block-description{font-weight:100}.text-block-detail{font-style:oblique}

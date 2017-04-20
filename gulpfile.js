@@ -77,18 +77,14 @@ gulp.task('css', function() {
 
 // watch for changes
 gulp.task('watch', function() {
-
   // image changes
   gulp.watch(folder.src + 'images/**/*', ['images']);
-
   // html changes
   gulp.watch(folder.src + 'html/**/*', ['html']);
-
   // javascript changes
   gulp.watch(folder.src + 'js/**/*', ['js']);
-
   // css changes
-  gulp.watch(folder.src + 'scss/**/*', ['css']);
+  gulp.watch(folder.src + 'sass/**/*', ['css']);
 });
 
 // run all tasks
