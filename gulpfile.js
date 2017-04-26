@@ -75,6 +75,13 @@ gulp.task('css', function() {
 		.pipe(gulp.dest(folder.build + 'css/'));
 });
 
+//bootstrap-font
+gulp.task('bootstrap-font', function() {
+
+  return gulp.src(folder.src + 'node_modules/bootstrap-sass/assets/fonts/bootstrap')
+    .pipe(gulp.dest(folder.build + 'fonts/bootstrap/'));
+});
+
 // watch for changes
 gulp.task('watch', function() {
   // image changes
@@ -88,7 +95,7 @@ gulp.task('watch', function() {
 });
 
 // run all tasks
-gulp.task('run', ['html', 'css', 'js']);
+gulp.task('run', ['html', 'css', 'bootstrap-font', 'js']);
 
 // default task
 gulp.task('default', ['run', 'watch']);

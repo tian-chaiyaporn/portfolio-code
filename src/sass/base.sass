@@ -1,6 +1,9 @@
-$font-color: #ffffcc
-$bg-color: #000033
+$font-color: #ffc
+$bg-color: #000//#000033
 $font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace
+
+@import /Users/Chaiyaporn/Project_Port/node_modules/bootstrap-sass/assets/stylesheets/bootstrap
+
 
 *
   box-sizing: border-box
@@ -12,3 +15,96 @@ body
   font-family: $font-family
   height: 100%
   margin: 0
+
+.visual-nav
+  margin-right: -30px
+  position: fixed
+  right: 30%
+  top: 20px
+
+  button
+    background-color: transparent
+    border: 0
+    color: #6ff
+    display: block
+    height: 30px
+    margin-bottom: 5px
+    margin-top: 5px
+    width: 30px
+
+.top-header
+  display: block
+  margin-left: auto
+  margin-right: auto
+  margin-top: 200px
+  max-width: 550px
+  padding: 20px
+
+.first-name,
+.last-name
+  display: block;
+  overflow-wrap: break-word;
+  margin: 0px
+
+.search-bar
+  margin-top: 20px
+
+  .search-input
+    background-color: transparent
+    border: 0
+    //border-bottom: solid 1px #66ffff
+    color: #6ff
+    font-size: 25px;
+    outline: none
+    text-align: left
+    width: 100%
+
+  .search-button
+    background-color: #069
+    border: 0
+    margin-top: 20px
+    padding: 5px 10px
+    text-align: right
+
+  .fake-carat
+    -webkit-animation: blink 1s steps(1) infinite
+    animation: blink 1s steps(1) infinite
+    border-left: 1px solid
+    color: #06f
+    font-size: 30px
+    height: 29px
+    margin-bottom: 4px
+    margin-left: 1px
+    margin-top: 4px
+    position: absolute;
+
+@keyframes blink
+  50%
+    color: transparent
+@-webkit-keyframes blink
+  50%
+    color: transparent
+
+
+.content
+  margin-left: auto
+  margin-right: auto
+  margin-top: 100px
+  max-width: 900px
+  padding: 20px
+
+  li
+    border-top: dashed 1px
+    list-style-type: none
+    padding: 80px 0 60px
+
+.info-nav
+  bottom: 20px
+  color: $font-color
+  position: fixed
+  right: 20px
+  text-align: right
+
+.about-me
+  color: $font-color
+  text-decoration: underline
