@@ -78,8 +78,8 @@ gulp.task('css', function() {
 //bootstrap-font
 gulp.task('bootstrap-font', function() {
 
-  return gulp.src(folder.src + 'node_modules/bootstrap-sass/assets/fonts/bootstrap')
-    .pipe(gulp.dest(folder.build + 'fonts/bootstrap/'));
+  gulp.src('./node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*.{ttf,woff,eof,svg}')
+  .pipe(gulp.dest('build/fonts/bootstrap/'));
 });
 
 // watch for changes
