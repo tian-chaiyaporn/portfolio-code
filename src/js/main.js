@@ -1,6 +1,8 @@
 /* requires:
-
+dummy_dat.js
+content.js
 */
+
 $('.search-input').click(function(){
 	$('.fake-carat').hide();
 });
@@ -21,4 +23,14 @@ $(document).keypress(function(e){
 	    }
 		$('.fake-carat').hide();
     	$('.search-input').focus();
+});
+
+
+
+$( document ).ready(function() {
+	var htmlElem = '';
+	for (var i=0; i<data.length; i++) {
+		htmlElem += makeContent(data[i]);
+	}
+    $(".js-content").append(htmlElem);
 });
