@@ -1,5 +1,5 @@
 $font-color: #ffc
-$bg-color: #000//#000033
+$bg-color: #002//#000033
 $font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace
 
 @import /Users/Chaiyaporn/Project_Port/node_modules/bootstrap-sass/assets/stylesheets/bootstrap
@@ -15,6 +15,13 @@ body
   font-family: $font-family
   height: 100%
   margin: 0
+
+a
+  color: inherit
+
+  &:hover
+    color: inherit
+    opacity: .5
 
 .visual-nav
   margin-right: -30px
@@ -37,14 +44,17 @@ body
   margin-left: auto
   margin-right: auto
   margin-top: 200px
-  max-width: 570px
-  padding: 20px
+  max-width: 610px
+  padding: 15px
 
 .first-name,
 .last-name
-  display: block;
-  overflow-wrap: break-word;
-  margin: 0px
+  display: block
+  margin: 0 0 10px
+  overflow-wrap: break-word
+
+.highlight
+  color: #fff
 
 .search-bar
   margin-top: 20px
@@ -89,14 +99,14 @@ body
 .content
   margin-left: auto
   margin-right: auto
-  margin-top: 100px
-  max-width: 900px
+  margin-top: 60px
+  max-width: 600px
   padding: 20px
 
   li
     border-top: dashed 1px
     list-style-type: none
-    padding: 80px 0 60px
+    padding: 70px 10px
 
 .info-nav
   bottom: 20px
