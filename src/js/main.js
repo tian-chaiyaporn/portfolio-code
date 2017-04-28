@@ -30,7 +30,7 @@ $(document).keypress(function(e){
 $( document ).ready(function() {
 	var htmlElem = '';
 	for (var i=0; i<data.length; i++) {
-		htmlElem += makeContent(data[i]);
+		htmlElem += makeContent(data[i], i);
 	}
     $(".js-content").append(htmlElem);
 });

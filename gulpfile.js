@@ -78,7 +78,7 @@ gulp.task('css', function() {
 //bootstrap-font
 gulp.task('bootstrap-font', function() {
 
-  gulp.src('./node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*.{ttf,woff,eof,svg}')
+  gulp.src('./node_modules/bootstrap-sass/assets/fonts/bootstrap/**/*.{ttf,woff,woff2,eof,svg}')
   .pipe(gulp.dest('build/fonts/bootstrap/'));
 });
 

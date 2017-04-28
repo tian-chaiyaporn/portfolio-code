@@ -9,7 +9,7 @@ var data = [
 		techStack: {
 			frontend: ['HTML5', 'SASS', 'Gulp', 'jQuery'],
 			backend: ['NodeJS', 'Express'],
-			design: ['UX/UI']
+			design: []
 		},
 		content: 'This is a website intended for showcasing an innovative way to design a portfolio website. It utilizes easy and accessible quick search and a design that imitates various aspects of programming syntaxes. Nevertheless, the design is clear enough for non-programmers to navigate.',
 		links: [
@@ -34,7 +34,7 @@ var data = [
 		techStack: {
 			frontend: ['HTML5', 'SASS', 'React', 'Redux', 'WebPack'],
 			backend: ['NodeJS', 'Express', 'Passport', 'MongoDB'],
-			design: ['Photoshop', 'Illustrator', 'UX/UI']
+			design: ['Photoshop', 'Illustrator']
 		},
 		content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras varius felis nec egestas molestie. Suspendisse fringilla augue eget scelerisque fermentum. Phasellus tristique libero augue, eu vestibulum erat placerat non. Etiam ornare, felis eget porttitor faucibus, tortor ex faucibus odio, vel egestas magna lacus at massa',
 		links: [
@@ -71,7 +71,7 @@ var data = [
 	},
 	
 	{
-		title: 'Suan Bua Hotel Branding',
+		title: 'Suan Bua Hotel Branding Design',
 		showCase: {
 			frontend: [],
 			backend: [],
@@ -80,7 +80,7 @@ var data = [
 		techStack: {
 			frontend: [],
 			backend: [],
-			design: ['Photoshop', 'Branding']
+			design: ['Photoshop', 'Illustrator']
 		},
 		content: 'A branding design including logo and identity design for a hotel located in Thailand. The concept is to create a feel of authenticity but with a modern twist. The logo must reflect the name "Suan Bua" which translates to Lotus Pond',
 		links: [

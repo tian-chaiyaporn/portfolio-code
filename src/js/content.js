@@ -1,4 +1,4 @@
-var makeContent = function(data){
+var makeContent = function(data, num){
 	var header = data.title;
 	var showCaseFront = data.showCase.frontend;
 	var showCaseBack = data.showCase.backend;
@@ -9,7 +9,15 @@ var makeContent = function(data){
 	var summary = data.content;
 	var links = data.links;
 
-	var htmlElement = '<li class="color-1 row text-block"><p class="reset-p light">&lt;section class="project"&gt;</p>';
+	// remember to add color when there are more than 12 projects in portfolio
+	var color = num+1;
+
+	var htmlElement = '<li class="color-'+ color +' row text-block">' + 
+						'<p class="reset-p">' +
+							'<span class="light">&lt;section class="</span>' + 
+							'<span class="heavy">project</span>' +
+							'<span class="light">"&gt;</span>'+
+						'</p>';
 	
 	// add title
 	htmlElement += '<p class="reset-p ml-1">' +
@@ -59,7 +67,7 @@ var makeContent = function(data){
 
 	// add the whole stack
 	htmlElement += '<p class="reset-p ml-1">' +
-					'<span class="light">&lt;ul class="</span><span class="heavy">theWholeStack</span><span class="light">"&gt;</span>' +
+					'<span class="light">&lt;ul class="</span><span class="heavy">thisProjectUses</span><span class="light">"&gt;</span>' +
 					'</p>';
 
 	// add theWholeStack for techStackFront
@@ -106,7 +114,8 @@ var makeContent = function(data){
 	// add summary
 	htmlElement += '<p class="reset-p light ml-1">&lt;summary&gt;</p>' +
 					'<p class="reset-p ml-2 highlight-text text-block-description">' +
-					summary + '</p><br>';
+					summary + '</p>';
+	htmlElement += '<p class="reset-p light ml-1">&lt;/summary&gt;</p><br>';
 
 	// add links
 	htmlElement += '<p class="reset-p ml-1">';
@@ -118,6 +127,6 @@ var makeContent = function(data){
 						'</b>&lt;/a&gt;</span><br>';
 	}
 
-	htmlElement += '</p></li>';
+	htmlElement += '</p><p class="reset-p light">&lt;/section&gt;</p></li>';
 	return htmlElement;
 };
