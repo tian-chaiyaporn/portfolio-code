@@ -1,16 +1,94 @@
 var makeContent = function(data, num){
+	var title = data.title;
 	var header = data.title;
+
+	var showCase = data.showCase;
 	var showCaseFront = data.showCase.frontend;
 	var showCaseBack = data.showCase.backend;
 	var showCaseDesign = data.showCase.design;
+
+	var techStack = data.techStack;
 	var techStackFront = data.techStack.frontend;
 	var techStackBack = data.techStack.backend;
 	var techStackDesign = data.techStack.design;
+
 	var summary = data.content;
 	var links = data.links;
 
 	// remember to add color when there are more than 12 projects in portfolio
 	var color = num+1;
+
+	// content
+	var contentHTML = $('#js-content-template').html()
+		.replace('@color', 'color-' + color)
+		.replace('@title', title);
+	
+	// summary
+	var summaryHTML = $('#js-summary-template').html()
+		.replace('@summary', summary);
+	
+	// links
+	var linksHTML = links.map(function(linkObject) {
+			return $('#js-links-template').html()
+				.replace(/@link/g, linkObject.link)
+				.replace(/@type/g, linkObject.type)
+		}).join('');
+
+	// showCases list
+	var showCaseListHTML = function() {
+		var typeList = [];
+		for (techType in showCase) {
+			var techList = showCase[techType].map(function(tech) {
+				return $('#js-showcase-li-template').html()
+					.replace(/@showcase-tech-type/g, techType)
+					.replace(/@showcase-tech-skill/g, tech)
+			});
+			typeList.push(techList.join(''));
+		}
+
+		return typeList.join('');
+	};	
+
+	// put showCases list into ul tag
+	var showCaseUlHTML = $("#js-showcase-ul-template").html()
+		.replace('@showcase-li', showCaseListHTML());
+
+	// techStack list
+	var techStackListHTML = function() {
+		var typeList = [];
+		for (techType in techStack) {
+			if (techStack[techType].length > 0) {
+				var techList = techStack[techType].reduce(function(tech, tech2) {
+					return tech + '|' + tech2;
+				});
+				techList.slice(0, -1);
+
+				typeList.push(
+					$('#js-techstack-li-template').html()
+						.replace(/@tech-type/g, techType)
+						.replace(/@tech-skill/g, techList)
+				);
+			}
+		};
+		return typeList.join('');
+	};	
+
+	// put techStack list in ul tag
+	var techStackUlHTML = $("#js-techstack-ul-template").html()
+		.replace('@techstack-li', techStackListHTML());
+
+	// join everything together into one html content
+	contentHTML = contentHTML
+		.replace('@summary', summaryHTML)
+		.replace('@links', linksHTML)
+		.replace('@showcase', showCaseUlHTML)
+		.replace('@techstack', techStackUlHTML);
+
+	return contentHTML;
+
+
+
+
 
 	var htmlElement = '<li class="color-'+ color +' row text-block">' + 
 						'<p class="reset-p">' +

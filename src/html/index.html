@@ -47,13 +47,80 @@
 	</header>
 	<main class="container">
 		<ul class="content js-content">
+
 		</ul>
 	</main>
 	<footer class="info-nav">
 		<a href="" class="about-me">about me</a>
 		<p class="personal-email">contact: tian.chinotaikul@gmail.com</p>
 	</footer>
+
+	<script type="text/template" id="js-content-template">
+			<li class="@color row text-block">
+				<p class="reset-p light">&lt;section class="@sample-count"&gt;</p>
+					<p class="reset-p ml-1">
+						<span class="light">&lt;title&gt;</span>
+						<span class="highlight-text ml-1"> @title</span>
+						<span class="light">&lt;/title&gt;</span>
+					</p>
+					@summary
+					@links
+					@showcase
+					@techstack
+				<p class="reset-p light">&lt;section&gt;</p>
+			</li>
+	</script>
+
+	<script type="text/template" id="js-summary-template">
+		<p class="reset-p light ml-1">&lt;summary&gt;</p>
+			<p class="reset-p ml-2 highlight-text text-block-description">
+				@summary
+			</p>
+		<p class="reset-p light ml-1">&lt;/summary&gt;</p>
+		<br>
+	</script>
+
+	<script type="text/template" id="js-links-template">
+		<p class="reset-p ml-1">
+			<span class="light">&lt;a href="</span><a href="">@link</a><span class="light">"&gt;<b>@type</b>&lt;/a&gt;</span>
+		</p><br>
+	</script>
+
+	<script type="text/template" id="js-showcase-ul-template">
+		<p class="reset-p ml-1">
+			<span class="light">&lt;ul class="</span><span class="heavy">highlighting</span><span class="light">"&gt;</span>
+		</p>
+			@showcase-li
+		<p class="reset-p light ml-1">&lt;/ul&gt;</p>
+	</script>
+
+	<script type="text/template" id="js-showcase-li-template">
+		<p class="reset-p ml-2">
+			<span class="light">&lt;li class="<b>@showcase-tech-type</b>"&gt;</span>
+			<span class="highlight-text inline">@showcase-tech-skill</span>
+			<span class="light">&lt;/li&gt;</span>
+		</p>
+	</script>
+
+	<script type="text/template" id="js-techstack-ul-template">
+		<p class="reset-p ml-1">
+			<span class="light">&lt;ul class="</span><span class="heavy">thisProjectUses</span><span class="light">"&gt;</span>
+		</p>
+		@techstack-li
+		<p class="reset-p light ml-1">&lt;/ul&gt;</p>
+	</script>
+
+	<script type="text/template" id="js-techstack-li-template">
+		<p class="reset-p ml-2">
+			<span class="light">&lt;li class="<b>@tech-type</b>"&gt;</span>
+			<span class="highlight-text ml-1">@tech-skill</span>
+			<span class="light">&lt;/li&gt;</span>
+		</p>
+	</script>
+
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
 	<script type="text/javascript" src="../../build/js/main.js"></script>
+
 </body>
 </html>
